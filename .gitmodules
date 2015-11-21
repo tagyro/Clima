@@ -1,0 +1,3 @@
+[submodule "Vendor/ILGeoNames"]
+	path = Vendor/ILGeoNames
+	url = https://github.com/InfiniteLoopDK/ILGeoNames.git
