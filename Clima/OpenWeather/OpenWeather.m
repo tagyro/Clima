@@ -10,7 +10,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-#define emptyImplementation(className)      @implementation className @end
+#import "Common.h"
 
 emptyImplementation(OWMWeather)
 emptyImplementation(OWMMain)
@@ -81,7 +81,7 @@ static OpenWeather *_sharedManager;
     }
 }
 
-- (void)requestWeatherForCity:(NSString*)city {
+- (void)requestWeatherForCity:(NSString*)city cached:(BOOL)cached {
     
     if (isNull(city)) {
         return;
@@ -97,6 +97,8 @@ static OpenWeather *_sharedManager;
         [manager.requestSerializer setCachePolicy:NSURLRequestUseProtocolCachePolicy];
     }
     
+    manager.requestSerializer.cachePolicy = cached ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReturnCacheDataElseLoad;
+    
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             city, @"q",
                             defaultLanguage, @"lang",
@@ -107,18 +109,25 @@ static OpenWeather *_sharedManager;
     AFHTTPRequestOperation *getCurrent = [manager GET:@"weather"
                                            parameters:params
                                               success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-                                                  NSLog(@"response: %@",responseObject);
+                                                  //
+                                                  NSError *error;
+                                                  OWMWeather *weather = [[OWMWeather alloc] initWithDictionary:responseObject error:&error];
+                                                  
+                                                  OWEGetCurrent *event = [OWEGetCurrent new];
+                                                  event.weather = weather;
+                                                  event.error = error;
+                                                  event.cached = cached;
+                                                  PUBLISH(event);
+                                                  
                                               } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-                                                  // weather info is not something you usually want to cache
-                                                  // but then again, we don't want to show users an empty screen, right?
-                                                  // so we force a reload from cache (if available)
-                                                  [manager.requestSerializer setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
-                                                  [[OpenWeather sharedManager] requestWeatherForCity:city];
+                                                  OWEGetCurrent *event = [OWEGetCurrent new];
+                                                  event.error = error;
+                                                  event.cached = cached;
+                                                  PUBLISH(event);
                                               }];
     
     [getCurrent resume];
-    // we set the cache back to use server protocol
-    [manager.requestSerializer setCachePolicy:NSURLRequestUseProtocolCachePolicy];
+    
 }
 
 

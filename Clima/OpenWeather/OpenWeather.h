@@ -14,16 +14,31 @@
 
 #pragma mark - Models
 
-@interface OWMWeather : JSONModel
-@end
-
+@protocol OWMMain @end
 @interface OWMMain : JSONModel
+@property (nonatomic) float temp;
+@property (nonatomic) float temp_min;
+@property (nonatomic) float temp_max;
+@property (nonatomic) int humidity;
 @end
 
+@protocol OWMWind @end
 @interface OWMWind : JSONModel
+@property (nonatomic) float *speed;
+@property (nonatomic) float *deg;
 @end
 
+@protocol OWMClouds @end
 @interface OWMClouds : JSONModel
+@property (nonatomic) int *all;
+@end
+
+
+@interface OWMWeather : JSONModel
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) OWMMain *main;
+@property (strong, nonatomic) OWMClouds *clouds;
+@property (strong, nonatomic) OWMWind *wind;
 @end
 
 #pragma mark - Events
@@ -33,8 +48,11 @@
 @end
 
 @interface OWEGetCurrent : OWEvent
+@property (strong, nonatomic) OWMWeather *weather;
+@property (nonatomic) BOOL cached;
 @end
 
+#pragma mark - Interface
 
 @interface OpenWeather : NSObject
 
@@ -56,7 +74,7 @@
  *
  *  @param city The name of the city
  */
-- (void)requestWeatherForCity:(NSString*)city __attribute__((nonnull));
+- (void)requestWeatherForCity:(NSString*)city cached:(BOOL)cached __attribute__((nonnull));
 
 // Class methods
 + (instancetype)sharedManager;
