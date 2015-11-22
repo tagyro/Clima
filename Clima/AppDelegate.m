@@ -17,6 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[OpenWeather sharedManager] setLanguage:LocalizationGetLanguage];
+    
+//    NSArray *locations = [[NSUserDefaults standardUserDefaults] objectForKey:kCityKey];
+//    
+//    for (NSString *city in locations) {
+//        [[OpenWeather sharedManager] requestWeatherForCity:city];
+//    }
+//    
+//    if (isNull(locations)) {
+//        [[OpenWeather sharedManager] requestWeatherForCity:@"Berlin"];
+//    }
+    
     return YES;
 }
 
