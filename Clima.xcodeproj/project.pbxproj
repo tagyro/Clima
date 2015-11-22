@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892849D51C0088FC00BDEFA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892849D41C0088FC00BDEFA1 /* CoreLocation.framework */; };
 		89E20DE21BFD15500003BED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DE11BFD15500003BED3 /* main.m */; };
 		89E20DE51BFD15500003BED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DE41BFD15500003BED3 /* AppDelegate.m */; };
-		89E20DE81BFD15500003BED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DE71BFD15500003BED3 /* ViewController.m */; };
 		89E20DEB1BFD15500003BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E20DE91BFD15500003BED3 /* Main.storyboard */; };
 		89E20DED1BFD15500003BED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E20DEC1BFD15500003BED3 /* Assets.xcassets */; };
 		89E20DF01BFD15500003BED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E20DEE1BFD15500003BED3 /* LaunchScreen.storyboard */; };
 		89E20DFB1BFD15500003BED3 /* ClimaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DFA1BFD15500003BED3 /* ClimaTests.m */; };
 		89E20E061BFD15500003BED3 /* ClimaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E051BFD15500003BED3 /* ClimaUITests.m */; };
+		89E20E1F1BFE18030003BED3 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89E20E1D1BFE18030003BED3 /* en.strings */; };
+		89E20E2C1C0072DC0003BED3 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E2B1C0072DC0003BED3 /* CityViewController.m */; };
+		89E20E2D1C0072DC0003BED3 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E2B1C0072DC0003BED3 /* CityViewController.m */; };
+		89E20E2E1C0072DC0003BED3 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E2B1C0072DC0003BED3 /* CityViewController.m */; };
+		89E20E311C0073030003BED3 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E301C0073030003BED3 /* WeatherViewController.m */; };
+		89E20E321C0073030003BED3 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E301C0073030003BED3 /* WeatherViewController.m */; };
+		89E20E331C0073030003BED3 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E301C0073030003BED3 /* WeatherViewController.m */; };
+		89E20E371C0073C10003BED3 /* OpenWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E361C0073C10003BED3 /* OpenWeather.m */; };
+		89E20E381C0073C10003BED3 /* OpenWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E361C0073C10003BED3 /* OpenWeather.m */; };
+		89E20E391C0073C10003BED3 /* OpenWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20E361C0073C10003BED3 /* OpenWeather.m */; };
+		89FDE91A1C00A72400CBFE91 /* GeoNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FDE9191C00A72400CBFE91 /* GeoNames.m */; };
+		89FDE91B1C00A72400CBFE91 /* GeoNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FDE9191C00A72400CBFE91 /* GeoNames.m */; };
+		89FDE91C1C00A72400CBFE91 /* GeoNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FDE9191C00A72400CBFE91 /* GeoNames.m */; };
+		95DAC922D15B80CBB871D670 /* Pods_Clima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB08A255650D0597F598DFA /* Pods_Clima.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20ABE392890A0495EC860D07 /* Pods-Clima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clima/Pods-Clima.release.xcconfig"; sourceTree = "<group>"; };
+		2DB08A255650D0597F598DFA /* Pods_Clima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D7A69160CA15A96E7342FC8 /* Pods-Clima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clima/Pods-Clima.debug.xcconfig"; sourceTree = "<group>"; };
+		892849D41C0088FC00BDEFA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		89D5271C1C00ACC400D07ED8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		89E20DDD1BFD15500003BED3 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E20DE11BFD15500003BED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89E20DE31BFD15500003BED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89E20DE41BFD15500003BED3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89E20DE61BFD15500003BED3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		89E20DE71BFD15500003BED3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		89E20DEA1BFD15500003BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89E20DEC1BFD15500003BED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89E20DEF1BFD15500003BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +68,15 @@
 		89E20E011BFD15500003BED3 /* ClimaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E20E051BFD15500003BED3 /* ClimaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClimaUITests.m; sourceTree = "<group>"; };
 		89E20E071BFD15500003BED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E20E1E1BFE18030003BED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/en.strings; sourceTree = "<group>"; };
+		89E20E2A1C0072DC0003BED3 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityViewController.h; path = CityVC/CityViewController.h; sourceTree = "<group>"; };
+		89E20E2B1C0072DC0003BED3 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityViewController.m; path = CityVC/CityViewController.m; sourceTree = "<group>"; };
+		89E20E2F1C0073030003BED3 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherViewController.h; path = WeatherVC/WeatherViewController.h; sourceTree = "<group>"; };
+		89E20E301C0073030003BED3 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherViewController.m; path = WeatherVC/WeatherViewController.m; sourceTree = "<group>"; };
+		89E20E351C0073C10003BED3 /* OpenWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWeather.h; path = OpenWeather/OpenWeather.h; sourceTree = "<group>"; };
+		89E20E361C0073C10003BED3 /* OpenWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWeather.m; path = OpenWeather/OpenWeather.m; sourceTree = "<group>"; };
+		89FDE9181C00A72400CBFE91 /* GeoNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoNames.h; path = GeoNames/GeoNames.h; sourceTree = "<group>"; };
+		89FDE9191C00A72400CBFE91 /* GeoNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoNames.m; path = GeoNames/GeoNames.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892849D51C0088FC00BDEFA1 /* CoreLocation.framework in Frameworks */,
+				95DAC922D15B80CBB871D670 /* Pods_Clima.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83E58C74D9BF0F285BF65533 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D7A69160CA15A96E7342FC8 /* Pods-Clima.debug.xcconfig */,
+				20ABE392890A0495EC860D07 /* Pods-Clima.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		89E20DD41BFD15500003BED3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +122,8 @@
 				89E20DF91BFD15500003BED3 /* ClimaTests */,
 				89E20E041BFD15500003BED3 /* ClimaUITests */,
 				89E20DDE1BFD15500003BED3 /* Products */,
+				83E58C74D9BF0F285BF65533 /* Pods */,
+				AF324771CAC1F8985D9226C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,11 +142,14 @@
 			children = (
 				89E20DE31BFD15500003BED3 /* AppDelegate.h */,
 				89E20DE41BFD15500003BED3 /* AppDelegate.m */,
-				89E20DE61BFD15500003BED3 /* ViewController.h */,
-				89E20DE71BFD15500003BED3 /* ViewController.m */,
+				89D5271C1C00ACC400D07ED8 /* Common.h */,
 				89E20DE91BFD15500003BED3 /* Main.storyboard */,
-				89E20DEC1BFD15500003BED3 /* Assets.xcassets */,
 				89E20DEE1BFD15500003BED3 /* LaunchScreen.storyboard */,
+				89FDE9171C00A70800CBFE91 /* GeoNames */,
+				89E20E341C0073930003BED3 /* OpenWeather */,
+				89E20E281C00729F0003BED3 /* WeatherVC */,
+				89E20E291C0072AB0003BED3 /* CityVC */,
+				89E20DEC1BFD15500003BED3 /* Assets.xcassets */,
 				89E20DF11BFD15500003BED3 /* Info.plist */,
 				89E20DE01BFD15500003BED3 /* Supporting Files */,
 			);
@@ -118,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				89E20DE11BFD15500003BED3 /* main.m */,
+				89E20E1D1BFE18030003BED3 /* en.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +183,51 @@
 			path = ClimaUITests;
 			sourceTree = "<group>";
 		};
+		89E20E281C00729F0003BED3 /* WeatherVC */ = {
+			isa = PBXGroup;
+			children = (
+				89E20E2F1C0073030003BED3 /* WeatherViewController.h */,
+				89E20E301C0073030003BED3 /* WeatherViewController.m */,
+			);
+			name = WeatherVC;
+			sourceTree = "<group>";
+		};
+		89E20E291C0072AB0003BED3 /* CityVC */ = {
+			isa = PBXGroup;
+			children = (
+				89E20E2A1C0072DC0003BED3 /* CityViewController.h */,
+				89E20E2B1C0072DC0003BED3 /* CityViewController.m */,
+			);
+			name = CityVC;
+			sourceTree = "<group>";
+		};
+		89E20E341C0073930003BED3 /* OpenWeather */ = {
+			isa = PBXGroup;
+			children = (
+				89E20E351C0073C10003BED3 /* OpenWeather.h */,
+				89E20E361C0073C10003BED3 /* OpenWeather.m */,
+			);
+			name = OpenWeather;
+			sourceTree = "<group>";
+		};
+		89FDE9171C00A70800CBFE91 /* GeoNames */ = {
+			isa = PBXGroup;
+			children = (
+				89FDE9181C00A72400CBFE91 /* GeoNames.h */,
+				89FDE9191C00A72400CBFE91 /* GeoNames.m */,
+			);
+			name = GeoNames;
+			sourceTree = "<group>";
+		};
+		AF324771CAC1F8985D9226C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				892849D41C0088FC00BDEFA1 /* CoreLocation.framework */,
+				2DB08A255650D0597F598DFA /* Pods_Clima.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89E20E0A1BFD15500003BED3 /* Build configuration list for PBXNativeTarget "Clima" */;
 			buildPhases = (
+				2FE49359939FABA77074E94E /* Check Pods Manifest.lock */,
 				89E20DD91BFD15500003BED3 /* Sources */,
 				89E20DDA1BFD15500003BED3 /* Frameworks */,
 				89E20DDB1BFD15500003BED3 /* Resources */,
+				46E83DFB7460BDA9E10E6B7D /* Embed Pods Frameworks */,
+				64976DD83D9C41FE69718B74 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E20DF01BFD15500003BED3 /* LaunchScreen.storyboard in Resources */,
+				89E20E1F1BFE18030003BED3 /* en.strings in Resources */,
 				89E20DED1BFD15500003BED3 /* Assets.xcassets in Resources */,
 				89E20DEB1BFD15500003BED3 /* Main.storyboard in Resources */,
 			);
@@ -265,14 +357,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FE49359939FABA77074E94E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46E83DFB7460BDA9E10E6B7D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clima/Pods-Clima-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64976DD83D9C41FE69718B74 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clima/Pods-Clima-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89E20DD91BFD15500003BED3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E20DE81BFD15500003BED3 /* ViewController.m in Sources */,
 				89E20DE51BFD15500003BED3 /* AppDelegate.m in Sources */,
+				89E20E371C0073C10003BED3 /* OpenWeather.m in Sources */,
+				89FDE91A1C00A72400CBFE91 /* GeoNames.m in Sources */,
+				89E20E311C0073030003BED3 /* WeatherViewController.m in Sources */,
 				89E20DE21BFD15500003BED3 /* main.m in Sources */,
+				89E20E2C1C0072DC0003BED3 /* CityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89FDE91B1C00A72400CBFE91 /* GeoNames.m in Sources */,
+				89E20E2D1C0072DC0003BED3 /* CityViewController.m in Sources */,
+				89E20E321C0073030003BED3 /* WeatherViewController.m in Sources */,
+				89E20E381C0073C10003BED3 /* OpenWeather.m in Sources */,
 				89E20DFB1BFD15500003BED3 /* ClimaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89FDE91C1C00A72400CBFE91 /* GeoNames.m in Sources */,
+				89E20E2E1C0072DC0003BED3 /* CityViewController.m in Sources */,
+				89E20E331C0073030003BED3 /* WeatherViewController.m in Sources */,
+				89E20E391C0073C10003BED3 /* OpenWeather.m in Sources */,
 				89E20E061BFD15500003BED3 /* ClimaUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +473,14 @@
 				89E20DEF1BFD15500003BED3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		89E20E1D1BFE18030003BED3 /* en.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89E20E1E1BFE18030003BED3 /* Base */,
+			);
+			name = en.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -409,9 +568,12 @@
 		};
 		89E20E0B1BFD15500003BED3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7A69160CA15A96E7342FC8 /* Pods-Clima.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Clima/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magooos.Clima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,9 +582,12 @@
 		};
 		89E20E0C1BFD15500003BED3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20ABE392890A0495EC860D07 /* Pods-Clima.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Clima/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magooos.Clima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +661,7 @@
 				89E20E0C1BFD15500003BED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89E20E0D1BFD15500003BED3 /* Build configuration list for PBXNativeTarget "ClimaTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +670,7 @@
 				89E20E0F1BFD15500003BED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89E20E101BFD15500003BED3 /* Build configuration list for PBXNativeTarget "ClimaUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +679,7 @@
 				89E20E121BFD15500003BED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
