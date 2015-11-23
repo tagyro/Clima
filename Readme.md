@@ -2,13 +2,15 @@
 
 iOS app to show weather info (yes, another one, because there really aren't enough)  
 
+![brasov](Screenshots/brasov.PNG =191x)![miami](Screenshots/miami.PNG =191x)![paris](Screenshots/paris.PNG =191x)![torino](Screenshots/torino.PNG =191x)![vienna](Screenshots/vienna.PNG =191x)![warsaw](Screenshots/warsaw.PNG =191x)
+
 ###Usage
 
 1. Clone the repo and navigate to the `Clima` folder (where the Podfile is)  
 2. `pod install` from the terminal  
 3. Generate API Key for the services bellow and add them in the `Common.h` file (you'll see the warning)
 
-###Dependencies
+]###Dependencies
 
 The deployment target is iOS 8+ (probably could be 7+).  
 Libraries/API's used:  
