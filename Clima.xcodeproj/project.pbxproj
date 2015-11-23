@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		892849D51C0088FC00BDEFA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892849D41C0088FC00BDEFA1 /* CoreLocation.framework */; };
+		89AA3CCF1C025E380008AD7B /* clima.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 89AA3CCE1C025E380008AD7B /* clima.jpg */; };
 		89E20DE21BFD15500003BED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DE11BFD15500003BED3 /* main.m */; };
 		89E20DE51BFD15500003BED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E20DE41BFD15500003BED3 /* AppDelegate.m */; };
 		89E20DEB1BFD15500003BED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E20DE91BFD15500003BED3 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		2DB08A255650D0597F598DFA /* Pods_Clima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7A69160CA15A96E7342FC8 /* Pods-Clima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clima/Pods-Clima.debug.xcconfig"; sourceTree = "<group>"; };
 		892849D41C0088FC00BDEFA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		89AA3CCE1C025E380008AD7B /* clima.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clima.jpg; sourceTree = "<group>"; };
 		89D5271C1C00ACC400D07ED8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		89E20DDD1BFD15500003BED3 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E20DE11BFD15500003BED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		89E20DE01BFD15500003BED3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89AA3CCE1C025E380008AD7B /* clima.jpg */,
 				89E20DE11BFD15500003BED3 /* main.m */,
 				89E20E1D1BFE18030003BED3 /* en.strings */,
 			);
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E20DF01BFD15500003BED3 /* LaunchScreen.storyboard in Resources */,
+				89AA3CCF1C025E380008AD7B /* clima.jpg in Resources */,
 				89E20E1F1BFE18030003BED3 /* en.strings in Resources */,
 				89E20DED1BFD15500003BED3 /* Assets.xcassets in Resources */,
 				89E20DEB1BFD15500003BED3 /* Main.storyboard in Resources */,
@@ -571,12 +575,12 @@
 			baseConfigurationReference = 6D7A69160CA15A96E7342FC8 /* Pods-Clima.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Clima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magooos.Clima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -585,12 +589,12 @@
 			baseConfigurationReference = 20ABE392890A0495EC860D07 /* Pods-Clima.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Clima/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magooos.Clima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
