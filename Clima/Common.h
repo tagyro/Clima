@@ -17,6 +17,7 @@ static NSString *const kFlickrSecret    = @"";
 
 #error Register at http://www.geonames.org/ to generate API key
 static NSString *const kGeoNameURLString = @"";
+static NSString *const kGeoNameUsername = @"";
 
 #error Register at http://openweathermap.org/
 static NSString *const kOpenWeatherAPIKey = @"";

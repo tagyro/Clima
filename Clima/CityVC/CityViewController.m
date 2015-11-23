@@ -35,7 +35,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    geoNames = [[GeoNames alloc] initWithUsername:@"andsto"];
+    geoNames = [[GeoNames alloc] initWithUsername:kGeoNameUsername];
     
     searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     searchController.searchResultsUpdater = self;
