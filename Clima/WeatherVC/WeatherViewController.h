@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@interface CVEGetPhotos : NSObject
+@end
+
+@interface CVELoadPhoto : NSObject
+@property (strong, nonatomic) UIImage *image;
+@end
+
 @interface WeatherViewController : UIViewController
 
 @end
