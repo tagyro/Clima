@@ -8,4 +8,5 @@ target "Clima" do
 	pod 'AMLocalized', '~> 0.3'
     pod 'AFNetworking', '~> 2.0'
     pod 'JSONModel'
+    pod 'FlickrKit', '~> 1.0'
 end
