@@ -2,7 +2,7 @@
 
 iOS app to show weather info (yes, another one, because there really aren't enough)  
 
-![brasov](Screenshots/brasov.PNG =191x333)![miami](Screenshots/miami.PNG =191x333)![paris](Screenshots/paris.PNG =191x333)![torino](Screenshots/torino.PNG =191x333)![vienna](Screenshots/vienna.PNG =191x333)![warsaw](Screenshots/warsaw.PNG =191x333)
+![Preview](preview.gif)
 
 ###Usage
 
