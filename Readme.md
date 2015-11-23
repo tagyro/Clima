@@ -28,7 +28,7 @@ Submit pull requests, fork, send me a [tweet](https://twitter.com/andreistoleru)
 
 The initial background image is [Public  Domain](https://creativecommons.org/publicdomain/zero/1.0/) by [Nicholas A. Tonelli](https://www.flickr.com/photos/nicholas_t/) - Thank you!
 
-The rest of the background images are loaded from [flickr](https://www.flickr.com), from a search on the weather and/or location. There is no endorsment by either [flickr](https://www.flickr.com) or the authors of these images.
+The rest of the background images are loaded from [flickr](https://www.flickr.com), from a search on the weather and/or location. There is no endorsement by either [flickr](https://www.flickr.com) or the authors of these images.
 
 
 ###LICENSE
