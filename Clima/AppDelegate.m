@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import "OpenWeather.h"
+
+#import <AMLocalized/LocalizationSystem.h>
+
 @interface AppDelegate ()
 
 @end
@@ -18,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[OpenWeather sharedManager] setLanguage:LocalizationGetLanguage];
+    [[OpenWeather sharedManager] setLanguage:[LocalizationGetLanguage componentsSeparatedByString:@"-"].firstObject];
     
 //    NSArray *locations = [[NSUserDefaults standardUserDefaults] objectForKey:kCityKey];
 //    
