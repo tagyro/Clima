@@ -10,12 +10,16 @@
 
 #import <JSONModel/JSONModel.h>
 
+#import <CoreLocation/CoreLocation.h>
+
 #pragma mark - Models
 @protocol GNMLocation @end
 @interface GNMLocation : JSONModel
 @property (strong, nonatomic) NSString *toponymName;
 @property (strong, nonatomic) NSString *countryName;
 @property (strong, nonatomic) NSString *countryCode;
+@property (strong, nonatomic) NSString *lat;
+@property (strong, nonatomic) NSString *lng;
 @property (nonatomic) int postalCode;
 @end
 

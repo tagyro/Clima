@@ -30,8 +30,6 @@ emptyImplementation(GNEGetPlaces)
 
 emptyImplementation(GNESelectPlace)
 
-static NSString *const kGeoNameURLString = @"http://api.geonames.org/";
-
 @interface GeoNames () {
     AFHTTPRequestOperationManager *manager;
     
