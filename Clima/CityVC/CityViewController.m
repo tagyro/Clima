@@ -35,18 +35,20 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-#warning Enter GeoNames username here
     geoNames = [[GeoNames alloc] initWithUsername:@"andsto"];
     
     searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     searchController.searchResultsUpdater = self;
     searchController.delegate = self;
+    searchController.searchBar.delegate = self;
     searchController.dimsBackgroundDuringPresentation = NO; // we want to be able to select a result
+    searchController.extendedLayoutIncludesOpaqueBars = NO;
+    
     self.tableView.tableHeaderView = searchController.searchBar;
     
     self.definesPresentationContext = YES;
     
-    // bug with UISearchBar? Radar this shit
+    // https://openradar.appspot.com/17315501
     [searchController.searchBar sizeToFit];
     
     REGISTER();
@@ -59,13 +61,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [searchController.searchBar becomeFirstResponder];
+    [searchController setActive:YES];
 }
 
 #pragma mark - Table view data source
@@ -99,7 +100,7 @@
     
     PUBLISH(event);
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self exit];
 }
 
 /*
@@ -159,7 +160,11 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)didPresentSearchController:(UISearchController *)_searchController {
+    [_searchController.searchBar becomeFirstResponder];
 }
 
 #pragma mark - UIScrollView
@@ -168,6 +173,14 @@
     if (filteredCities.count) {
         [searchController.searchBar resignFirstResponder];
     }
+}
+
+#pragma mark - Internal methods
+
+- (void)exit {
+    [searchController setActive:NO];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - GeoNames events
@@ -180,6 +193,12 @@ SUBSCRIBE(GNEGetPlaces) {
     filteredCities = [NSArray arrayWithArray:event.locations];
     
     [self.tableView reloadData];
+}
+
+#pragma mark - Appearance
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 
 @end
