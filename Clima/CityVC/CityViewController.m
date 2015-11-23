@@ -14,6 +14,8 @@
 
 #import <AMLocalized/LocalizationSystem.h>
 
+#import "Common.h"
+
 @interface CityViewController () {
     
     UISearchController *searchController;
