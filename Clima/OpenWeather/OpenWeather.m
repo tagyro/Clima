@@ -12,10 +12,30 @@
 
 #import "Common.h"
 
-emptyImplementation(OWMWeather)
+@implementation OWMModel
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+@end
+
 emptyImplementation(OWMMain)
 emptyImplementation(OWMWind)
 emptyImplementation(OWMClouds)
+
+@implementation OWMDescription
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]
+            initWithDictionary:@{@"main": @"words",
+                                 @"description": @"desc"}];
+}
+
+@end
+
+emptyImplementation(OWMWeather)
+
 emptyImplementation(OWEvent)
 emptyImplementation(OWEGetCurrent)
 
@@ -28,10 +48,6 @@ emptyImplementation(OWEGetCurrent)
 @end
 
 @implementation OpenWeather
-
-static NSString *const kOWAPIKey = @"2de143494c0b295cca9337e1e96b00e0"; // 3d813e5adee2e1828648815f05d4e3fb
-
-static NSString *const kBaseURL = @"http://api.openweathermap.org/data/2.5/";
 
 static OpenWeather *_sharedManager;
 
@@ -68,14 +84,12 @@ static OpenWeather *_sharedManager;
     NSString *value = [[OpenWeather languages] valueForKey:language];
     if (!isNull(value)) {
         defaultLanguage = value;
-        NSLog(@"OpenWeather language: %@",defaultLanguage);
         return;
     }
     
     NSString *key = [[[OpenWeather languages] allKeysForObject:language] firstObject];
     if (key) {
         defaultLanguage = key;
-        NSLog(@"OpenWeather language: %@",defaultLanguage);
     } else {
         NSLog(@"Couldn't find the requested language \"%@\", see [OpenWeather languages] for a list of available options",language);
     }
@@ -87,9 +101,8 @@ static OpenWeather *_sharedManager;
         return;
     }
     
-    NSLog(@"language: %@",defaultLanguage);
     if (isNull(manager)) {
-        manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseURL]];
+        manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:kOpenWeatherURLString]];
         
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -102,9 +115,9 @@ static OpenWeather *_sharedManager;
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             city, @"q",
                             defaultLanguage, @"lang",
-                            kOWAPIKey, @"appid", nil];
-    
-    NSLog(@"requesting current weather with %@",params);
+                            kOpenWeatherAPIKey, @"appid",
+                            @"metric", @"units",
+                            nil];
     
     AFHTTPRequestOperation *getCurrent = [manager GET:@"weather"
                                            parameters:params
@@ -117,6 +130,7 @@ static OpenWeather *_sharedManager;
                                                   event.weather = weather;
                                                   event.error = error;
                                                   event.cached = cached;
+                                                  event.city = city;
                                                   PUBLISH(event);
                                                   
                                               } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {

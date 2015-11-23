@@ -14,31 +14,40 @@
 
 #pragma mark - Models
 
+@interface OWMModel : JSONModel
+@end
+
 @protocol OWMMain @end
-@interface OWMMain : JSONModel
-@property (nonatomic) float temp;
-@property (nonatomic) float temp_min;
-@property (nonatomic) float temp_max;
+@interface OWMMain : OWMModel
+@property (nonatomic) NSString *temp;
+@property (nonatomic) NSString *temp_min;
+@property (nonatomic) NSString *temp_max;
 @property (nonatomic) int humidity;
 @end
 
 @protocol OWMWind @end
-@interface OWMWind : JSONModel
-@property (nonatomic) float *speed;
-@property (nonatomic) float *deg;
+@interface OWMWind : OWMModel
+@property (nonatomic) NSString *speed;
+@property (nonatomic) NSString *deg;
 @end
 
 @protocol OWMClouds @end
-@interface OWMClouds : JSONModel
-@property (nonatomic) int *all;
+@interface OWMClouds : OWMModel
+@property (nonatomic) NSString *all;
 @end
 
+@protocol OWMDescription @end
+@interface OWMDescription : OWMModel
+@property (strong, nonatomic) NSString *words;
+@property (strong, nonatomic) NSString *desc;
+@end
 
-@interface OWMWeather : JSONModel
+@interface OWMWeather : OWMModel
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) OWMMain *main;
 @property (strong, nonatomic) OWMClouds *clouds;
 @property (strong, nonatomic) OWMWind *wind;
+@property (strong, nonatomic) NSArray <OWMDescription> *weather;
 @end
 
 #pragma mark - Events
@@ -48,7 +57,8 @@
 @end
 
 @interface OWEGetCurrent : OWEvent
-@property (strong, nonatomic) OWMWeather *weather;
+@property (strong, nonatomic) OWMWeather    *weather;
+@property (strong, nonatomic) NSString      *city;
 @property (nonatomic) BOOL cached;
 @end
 
